@@ -82,6 +82,9 @@ type Header struct {
 	// BaseFee was added by EIP-1559 and is ignored in legacy headers.
 	BaseFee *big.Int `json:"baseFeePerGas" rlp:"optional"`
 
+	// Signer is used by hotstuff and is ignored in legacy headers.
+	Signer common.Address `json:"signer"      rlp:"optional"     gencodec:"required"`
+
 	// WithdrawalsHash was added by EIP-4895 and is ignored in legacy headers.
 	WithdrawalsHash *common.Hash `json:"withdrawalsRoot" rlp:"optional"`
 
